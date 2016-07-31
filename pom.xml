@@ -1,22 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<prerequisites>
-		<maven>3.0.1</maven>
-	</prerequisites>
-
-	<parent>
-		<groupId>org.sonatype.oss</groupId>
-		<artifactId>oss-parent</artifactId>
-		<version>9</version>
-	</parent>
-
-	<groupId>com.sinnbo</groupId>
-	<artifactId>syslog4j</artifactId>
-	<version>0.9.56-SNAPSHOT</version>
+	<groupId>com.uumind</groupId>
+	<artifactId>syslog4j-extended</artifactId>
+	<version>0.9.56.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>sinnbo-extended-syslog4j</name>
+	<name>syslog4j-extended</name>
 
 	<description>
         Syslog4j provides client and server implementations of the BSD Syslog protocol (RFC 3164) and the draft "structured syslog" protocol (RFC Draft).
