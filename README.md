@@ -9,7 +9,7 @@ Syslog4j provides client and server implementations of the BSD Syslog protocol
 
 ## 说明
 
-在syslog4j-graylog2（https://github.com/Graylog2/syslog4j-graylog2）的版本上继续扩充功能发的版本。
+在syslog4j-graylog2（https://github.com/Graylog2/syslog4j-graylog2） 的版本上继续扩充功能发的版本。
 
 ## Warning
 
