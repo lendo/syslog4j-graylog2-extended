@@ -2,6 +2,7 @@ package org.graylog2.syslog4j.server.impl.event.printstream;
 
 import java.io.PrintStream;
 import java.net.SocketAddress;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.graylog2.syslog4j.server.SyslogServerEventIF;
@@ -22,6 +23,7 @@ import org.graylog2.syslog4j.util.SyslogUtility;
  */
 public class PrintStreamSyslogServerEventHandler implements SyslogServerSessionEventHandlerIF {
     private static final long serialVersionUID = 6036415838696050746L;
+    private static final SimpleDateFormat dateParser = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
 
     protected PrintStream stream = null;
 
@@ -38,10 +40,9 @@ public class PrintStreamSyslogServerEventHandler implements SyslogServerSessionE
     }
 
     public void event(Object session, SyslogServerIF syslogServer, SocketAddress socketAddress, SyslogServerEventIF event) {
-        String date = (event.getDate() == null ? new Date() : event.getDate()).toString();
+        String date = dateParser.format(event.getDate() == null ? new Date() : event.getDate());
         String facility = SyslogUtility.getFacilityString(event.getFacility());
         String level = SyslogUtility.getLevelString(event.getLevel());
-
         this.stream.println("{" + facility + "} " + date + " " + level + " " + event.getMessage());
     }
 

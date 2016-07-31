@@ -151,6 +151,7 @@ public class SyslogServerMain {
             }
         }
 
+        System.out.println("Use protocol: " + options.protocol);
         SyslogServerIF syslogServer = SyslogServer.getInstance(options.protocol);
 
         SyslogServerConfigIF syslogServerConfig = syslogServer.getConfig();

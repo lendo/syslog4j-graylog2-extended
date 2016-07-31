@@ -10,59 +10,33 @@
         <version>9</version>
     </parent>
 
-    <groupId>org.graylog2</groupId>
+    <groupId>com.sinnbo</groupId>
     <artifactId>syslog4j</artifactId>
     <version>0.9.56-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>syslog4j-graylog2</name>
-    <url>https://github.com/Graylog2/syslog4j-graylog2</url>
+    <name>sinnbo-extended-syslog4j</name>
 
     <description>
         Syslog4j provides client and server implementations of the BSD Syslog protocol (RFC 3164) and the draft "structured syslog" protocol (RFC Draft).
         This is a repackaged fork used in Graylog2, as the original package has no recent versions published to Maven Central.
     </description>
 
-    <licenses>
-        <license>
-            <name>LGPL</name>
-            <url>http://www.gnu.org/licenses/lgpl-2.1.html</url>
-        </license>
-    </licenses>
-
-    <scm>
-        <url>https://github.com/Graylog2/syslog4j-graylog2</url>
-        <connection>scm:git:git@github.com:Graylog2/syslog4j-graylog2.git</connection>
-        <developerConnection>scm:git:git@github.com:Graylog2/syslog4j-graylog2.git</developerConnection>
-        <tag>HEAD</tag>
-    </scm>
-
-    <issueManagement>
-        <system>GitHub Issues</system>
-        <url>https://github.com/Graylog2/syslog4j-graylog2/issues</url>
-    </issueManagement>
-
-    <ciManagement>
-        <system>Travis CI</system>
-        <url>https://travis-ci.org/Graylog2/syslog4j-graylog2</url>
-    </ciManagement>
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <distributionManagement>
-        <snapshotRepository>
-            <id>sonatype-nexus-snapshots</id>
-            <name>Sonatype Nexus Snapshots</name>
-            <url>${sonatypeOssDistMgmtSnapshotsUrl}</url>
-        </snapshotRepository>
-        <repository>
-            <id>sonatype-nexus-staging</id>
-            <name>Nexus Release Repository</name>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-    </distributionManagement>
+		<repository>
+			<id>releases</id>
+			<url>http://pms.sinnbo.com:8081/nexus/content/repositories/releases/</url>
+		</repository>
+
+		<snapshotRepository>
+			<id>snapshots</id>
+			<url>http://pms.sinnbo.com:8081/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
 
     <dependencies>
         <dependency>

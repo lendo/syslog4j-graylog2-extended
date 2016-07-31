@@ -63,9 +63,11 @@ public class UDPNetSyslogServer extends AbstractSyslogServer {
             this.shutdown = false;
 
         } catch (SocketException se) {
+            se.printStackTrace();
             return;
 
         } catch (UnknownHostException uhe) {
+            uhe.printStackTrace();
             return;
         }
 
@@ -80,8 +82,9 @@ public class UDPNetSyslogServer extends AbstractSyslogServer {
                 dp = new DatagramPacket(receiveData, receiveData.length);
 
                 this.ds.receive(dp);
-
+                System.out.println("111" + receiveData + "--" + receiveData.length);
                 if(dp.getLength() > 0) {
+                    System.out.println("222" + receiveData + "--" + receiveData.length);
                     SyslogServerEventIF event = createEvent(this.getConfig(), receiveData, dp.getLength(), dp.getAddress());
                     handleEvent(null, this, dp, event);
                 }
