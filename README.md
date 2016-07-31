@@ -1,4 +1,4 @@
-syslog4j
+syslog4j-extended
 ========
 
 [![Build Status](https://travis-ci.org/Graylog2/syslog4j-graylog2.svg)](https://travis-ci.org/Graylog2/syslog4j-graylog2)
@@ -6,6 +6,10 @@ syslog4j
 
 Syslog4j provides client and server implementations of the BSD Syslog protocol
 (RFC 3164) and the draft "structured syslog" protocol (RFC Draft).
+
+## 说明
+
+在syslog4j-graylog2（https://github.com/Graylog2/syslog4j-graylog2）的版本上继续扩充功能发的版本。
 
 ## Warning
 
